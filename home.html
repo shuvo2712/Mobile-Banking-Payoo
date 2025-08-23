@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage - Payoo</title>
+    <title>Home - Payoo</title>
     <!-- icon -->
     <link rel="icon" href="images/27.png" />
     <!-- daisy ui -->
@@ -31,7 +31,7 @@
       <div class="flex gap-2">
         <img class="h-10" src="assets/logo.png" alt="Logo" />
         <div class="">
-          <h2 class="font-bold">$270</h2>
+          <h2 class="font-bold">$<span id="main-balance">270</span></h2>
           <p class="text-[#08080880]">Available Balance</p>
         </div>
       </div>
@@ -89,7 +89,7 @@
             <br />
             <select
               id="input-bank"
-              class="select bg-[#f4f5f7] rounded-3xl my-2"
+              class="select bg-[#f4f5f7] rounded-3xl my-2 w-full"
             >
               <option disabled selected>Choose Bank</option>
               <option>Dhaka Bank</option>
@@ -102,10 +102,10 @@
             <label class="font-semibold" for="">Bank Account Number</label>
             <br />
             <input
-              id="input-number"
+              id="input-account"
               type="text"
               placeholder="Enter bank account number"
-              class="input bg-[#f4f5f7] rounded-full my-2"
+              class="input bg-[#f4f5f7] rounded-full my-2 w-full"
             />
           </div>
           <!-- amount -->
@@ -116,7 +116,7 @@
               id="input-ammount"
               type="text"
               placeholder="Enter amount to withdraw"
-              class="input bg-[#f4f5f7] rounded-full my-2"
+              class="input bg-[#f4f5f7] rounded-full my-2 w-full"
             />
           </div>
           <!-- pin -->
@@ -127,13 +127,17 @@
               id="input-pin"
               type="text"
               placeholder="Enter PIN number"
-              class="input bg-[#f4f5f7] rounded-full my-2"
+              class="input bg-[#f4f5f7] rounded-full my-2 w-full"
             />
           </div>
+          <!-- button -->
+          <button id="add-money-btn" class="btn rounded-full mt-3 bg-[#0874F2] text-white w-full">Add Money</button>
+          <!-- form ends -->
         </form>
       </div>
     </section>
+
     <!-- script -->
-     <script src="homepage.js"></script>
+     <script src="home.js"></script>
   </body>
 </html>
