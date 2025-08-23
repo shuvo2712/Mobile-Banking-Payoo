@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Homepage - Payoo</title>
+    <!-- icon -->
+    <link rel="icon" href="images/27.png" />
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <h1>Homepage</h1>
+<body class="bg-[#f4f5f7] h-[full] max-w-lg mx-auto">
+    <!-- header section -->
+    <header class="flex justify-between items-center border-b-1 border-gray-400 p-4">
+        <div class="flex gap-2">
+            <img class="h-10" src="assets/logo.png" alt="Logo">
+            <div class="">
+                <h2 class="font-bold">$270</h2>
+                <p class="text-[#08080880]">Available Balance</p>
+            </div>
+        </div>
+        <!-- logout -->
+        <div>
+            <button class="btn text-[#08080880]"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+        </div>
+    </header>
+    <!-- welcome section -->
+    <section class="p-4 bg-white">
+        <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+        <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and many more...</p>
+    </section>
+    <!-- features -->
+     <section class="p-4 bg-white rounded-b-2xl grid grid-cols-3 gap-5">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+            <img class="mx-auto" src="assets/addMoney.png" alt="">
+            <h2>Add Money</h2>
+        </div>
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+            <img class="mx-auto" src="assets/cashOut.png" alt="">
+            <h2>Cashout</h2>
+        </div>
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+            <img class="mx-auto" src="assets/transfer.png" alt="">
+            <h2>Transfer Money</h2>
+        </div>
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+            <img class="mx-auto" src="assets/getBonus.png" alt="">
+            <h2>Get Bonus</h2>
+        </div>
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+            <img class="mx-auto" src="assets/payBill.png" alt="">
+            <h2>Pay Bill</h2>
+        </div>
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+            <img class="mx-auto" src="assets/transaction.png" alt="">
+            <h2>Trransactions</h2>
+        </div>
+     </section>
+     <!-- form -->
+      <section class="form-section">
+        <div></div>
+
+      </section>
 </body>
 </html>
