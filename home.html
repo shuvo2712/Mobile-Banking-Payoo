@@ -41,7 +41,7 @@
       <div class="flex gap-2">
         <img class="h-10" src="assets/logo.png" alt="Logo" />
         <div class="">
-          <h2 class="font-bold">$<span id="main-balance">270</span></h2>
+          <h2 class="font-bold">$<span id="main-balance"> 7000</span></h2>
           <p class="text-[#08080880]">Available Balance</p>
         </div>
       </div>
@@ -62,7 +62,7 @@
       </p>
     </section>
 
-    <!-- Features section -->
+    <!-- Features / Cards section -->
     <section class="p-4 bg-white rounded-b-2xl grid grid-cols-3 gap-5">
       <!-- add money feature -->
       <div id="add-money-card" class="feature-card">
@@ -104,7 +104,7 @@
             <label class="font-semibold" for="">Select A Bank</label>
             <br />
             <select
-              id="input-bank"
+              id="input-add-money-bank"
               class="select bg-[#f4f5f7] rounded-3xl my-2 w-full"
             >
               <option disabled selected>Choose Bank</option>
@@ -121,7 +121,7 @@
             <label class="font-semibold" for="">Bank Account Number</label>
             <br />
             <input
-              id="input-account"
+              id="input-add-money-account"
               type="text"
               placeholder="Enter bank account number"
               class="input bg-[#f4f5f7] rounded-full my-2 w-full"
@@ -132,7 +132,7 @@
             <label class="font-semibold" for="">Amount to Add</label>
             <br />
             <input
-              id="input-ammount"
+              id="input-add-money-amount"
               type="text"
               placeholder="Enter amount to add"
               class="input bg-[#f4f5f7] rounded-full my-2 w-full"
@@ -143,20 +143,19 @@
             <label class="font-semibold" for="">PIN number</label>
             <br />
             <input
-              id="input-pin"
-              type="text"
+              id="input-add-money-pin"
+              type="password"
               placeholder="Enter PIN number"
               class="input bg-[#f4f5f7] rounded-full my-2 w-full"
             />
           </div>
-          <!-- button -->
+          <!-- add money button -->
           <button
             id="add-money-btn"
-            class="btn rounded-full mt-3 bg-[#0874F2] text-white w-full"
+            class="btn bg-[#0874F2] text-white w-full rounded-full mt-3"
           >
             Add Money
           </button>
-          <!-- form ends -->
         </form>
       </div>
 
@@ -169,7 +168,7 @@
             <label class="font-semibold" for="">Agent Number</label>
             <br />
             <input
-              id="input-agent"
+              id="input-cash-out-agent"
               type="text"
               placeholder="Enter agent number"
               class="input bg-[#f4f5f7] rounded-full my-2 w-full"
@@ -180,7 +179,7 @@
             <label class="font-semibold" for="">Amount To Withdraw</label>
             <br />
             <input
-              id="input-ammount"
+              id="input-cash-out-amount"
               type="text"
               placeholder="Enter amount to withdraw"
               class="input bg-[#f4f5f7] rounded-full my-2 w-full"
@@ -191,22 +190,21 @@
             <label class="font-semibold" for="">PIN number</label>
             <br />
             <input
-              id="input-pin"
-              type="text"
+              id="input-cash-out-pin"
+              type="password"
               placeholder="Enter PIN number"
               class="input bg-[#f4f5f7] rounded-full my-2 w-full"
             />
           </div>
-          <!-- button -->
+          <!-- cash out button -->
           <button
-            id="withdraw-money-btn"
-            class="btn rounded-full mt-3 bg-[#0874F2] text-white w-full"
+            id="cash-out-btn"
+            class="btn bg-[#0874F2] text-white w-full rounded-full mt-3"
           >
-            Withdraw Money
+            Cash Out
           </button>
         </form>
       </div>
-      <!-- cash out form ends -->
 
       <!-- transfer money form -->
       <!-- get bonus form -->

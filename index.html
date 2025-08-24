@@ -15,26 +15,46 @@
     <!-- tailwind css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center justify-center">
+  <!------------------------------ BODY ------------------------------>
+  <body
+    class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center justify-center"
+  >
     <!-- logo -->
-     <div class="w-[300px] h-[130px] flex justify-center items-center bg-[url(./assets/bg.png)] bg-cover">
-        <img src="assets/logo.png" alt="Logo">
-     </div>
+    <figure
+      class="w-[300px] h-[130px] flex justify-center items-center bg-[url(./assets/bg.png)] bg-cover"
+    >
+      <img src="assets/logo.png" alt="Logo" />
+    </figure>
     <!-- Log In Form -->
     <form class="w-[350px] bg-white border border-[#0874F2] rounded-4xl p-10">
       <div class="flex flex-col gap-4">
-        <!-- number -->
-        <label class="font-semibold" for="">Mobile Number :</label>
-        <input type="text" placeholder="01*********" class="input rounded-full bg-[#f4f5f7]" id="input-number"/>
-        <!-- password -->
-        <label class="font-semibold" for="">Password :</label>
-        <input type="password" placeholder="********" class="input rounded-full bg-[#f4f5f7]" id="input-password"/>
-        <!-- button -->
-        <button id="loginButton" class="btn rounded-full mt-3 bg-[#0874F2] text-white">Log In</button>
+        <!-- mobile number -->
+        <label class="font-semibold" for="">Mobile Number</label>
+        <input
+          id="input-mobile"
+          type="number"
+          placeholder="01*********"
+          class="input rounded-full bg-[#f4f5f7]"
+        />
+        <!-- pin -->
+        <label class="font-semibold" for="">4 Digit Pin</label>
+        <input
+          id="input-pin"
+          type="password"
+          placeholder="********"
+          class="input rounded-full bg-[#f4f5f7]"
+        />
+        <!-- log in button -->
+        <button
+          id="login-button"
+          class="btn rounded-full mt-3 bg-[#0874F2] text-white"
+        >
+          Log In
+        </button>
       </div>
     </form>
 
     <!-- Script JS -->
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
