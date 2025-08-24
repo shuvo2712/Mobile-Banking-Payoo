@@ -22,9 +22,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- style -->
+    <style>
+      .feature-card {
+        border: 2px solid #0808081a;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+    </style>
   </head>
+
   <body class="bg-[#f4f5f7] h-[full] max-w-lg mx-auto">
-    <!-- header section -->
+    <!-- Header section -->
     <header
       class="flex justify-between items-center border-b-1 border-gray-400 p-4"
     >
@@ -38,11 +48,12 @@
       <!-- logout button -->
       <div>
         <button class="btn text-[#08080880]">
-          <i class="fa-solid fa-right-from-bracket"></i>Logout
+          <i class="fa-solid fa-right-from-bracket"></i>Log Out
         </button>
       </div>
     </header>
-    <!-- welcome section -->
+
+    <!-- Welcome section -->
     <section class="p-4 bg-white">
       <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
       <p class="text-[#08080880]">
@@ -50,38 +61,43 @@
         low and many more...
       </p>
     </section>
-    <!-- features section -->
+
+    <!-- Features section -->
     <section class="p-4 bg-white rounded-b-2xl grid grid-cols-3 gap-5">
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+      <!-- add money feature -->
+      <div id="add-money-card" class="feature-card">
         <img class="mx-auto" src="assets/addMoney.png" alt="" />
         <h2>Add Money</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+      <!-- cash out feature -->
+      <div id="cash-out-card" class="feature-card">
         <img class="mx-auto" src="assets/cashOut.png" alt="" />
-        <h2>Cashout</h2>
+        <h2>Cash Out</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+      <!-- transfer money feature -->
+      <div id="transfer-money-card" class="feature-card">
         <img class="mx-auto" src="assets/transfer.png" alt="" />
         <h2>Transfer Money</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+      <div id="get-bonus-card" class="feature-card">
         <img class="mx-auto" src="assets/getBonus.png" alt="" />
         <h2>Get Bonus</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+      <div id="pay-bill-card" class="feature-card">
         <img class="mx-auto" src="assets/payBill.png" alt="" />
         <h2>Pay Bill</h2>
       </div>
-      <div class="border-2 border-[#0808081a] text-center p-3 rounded-2xl">
+      <div id="transactions-card" class="feature-card">
         <img class="mx-auto" src="assets/transaction.png" alt="" />
-        <h2>Trransactions</h2>
+        <h2>Transactions</h2>
       </div>
     </section>
-    <!-- add money section -->
-    <section class="form-section p-5">
-      <div class="">
+
+    <!-- Form section -->
+    <section class="all-form-section p-5">
+      <!-- add money form -->
+      <div id="add-money-form" style="display: none;">
         <h2 class="font-semibold mb-2">Add Money</h2>
-        <!-- form -->
         <form action="" class="bg-white rounded-2xl p-5">
           <!-- select bank -->
           <div>
@@ -92,8 +108,11 @@
               class="select bg-[#f4f5f7] rounded-3xl my-2 w-full"
             >
               <option disabled selected>Choose Bank</option>
-              <option>Dhaka Bank</option>
+              <option>AB Bank</option>
+              <option>Brac Bank</option>
               <option>City Bank</option>
+              <option>Dhaka Bank</option>
+              <option>Islami Bank</option>
               <option>Prime Bank</option>
             </select>
           </div>
@@ -140,9 +159,62 @@
           <!-- form ends -->
         </form>
       </div>
+
+      <!-- cashout form -->
+      <div id="cash-out-form" style="display: none;">
+        <h2 class="font-semibold mb-2">Cash Out</h2>
+        <form action="" class="bg-white rounded-2xl p-5">
+          <!-- agent number -->
+          <div>
+            <label class="font-semibold" for="">Agent Number</label>
+            <br />
+            <input
+              id="input-agent"
+              type="text"
+              placeholder="Enter agent number"
+              class="input bg-[#f4f5f7] rounded-full my-2 w-full"
+            />
+          </div>
+          <!-- amount -->
+          <div>
+            <label class="font-semibold" for="">Amount To Withdraw</label>
+            <br />
+            <input
+              id="input-ammount"
+              type="text"
+              placeholder="Enter amount to withdraw"
+              class="input bg-[#f4f5f7] rounded-full my-2 w-full"
+            />
+          </div>
+          <!-- pin -->
+          <div>
+            <label class="font-semibold" for="">PIN number</label>
+            <br />
+            <input
+              id="input-pin"
+              type="text"
+              placeholder="Enter PIN number"
+              class="input bg-[#f4f5f7] rounded-full my-2 w-full"
+            />
+          </div>
+          <!-- button -->
+          <button
+            id="withdraw-money-btn"
+            class="btn rounded-full mt-3 bg-[#0874F2] text-white w-full"
+          >
+            Withdraw Money
+          </button>
+        </form>
+      </div>
+      <!-- cash out form ends -->
+
+      <!-- transfer money form -->
+      <!-- get bonus form -->
+      <!-- pay bill form -->
+      <!-- transactions form -->
     </section>
 
-    <!-- script -->
+    <!-- Script -->
     <script src="home.js"></script>
   </body>
 </html>

@@ -1,5 +1,21 @@
-console.log("homepage.js connected");
+console.log("home.js working...");
+// Toggle forms
+// 1. add-money toggle
+document.getElementById("add-money-card").addEventListener("click", function () {document.getElementById("add-money-form").style.display = "block";
+  document.getElementById("cash-out-form").style.display = "none";
+});
 
+// 2. cash-out toggle
+document.getElementById("cash-out-card").addEventListener("click", function () {
+  document.getElementById("cash-out-form").style.display = "block";
+  document.getElementById("add-money-form").style.display = "none";
+});
+
+
+
+
+
+// add money button
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (e) {
@@ -19,3 +35,5 @@ document
       console.log('ammount-added :', ammount);
       console.log('new-balance :', newBalance);
   });
+
+// cash out button
