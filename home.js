@@ -17,6 +17,18 @@ function toggleForms(Id) {
     }
   }
 }
+// Function to toggle card active state
+function toggleCards(cardId) {
+  const cards = document.getElementsByClassName("feature-card");
+  for (const card of cards) {
+    if (card.id === cardId) {
+      card.style.border = "2px solid #2563eb";
+    } else {
+      card.style.border = "2px solid #0808081a";
+    }
+  }
+}
+
 // Function to get input value as integer
 function getInputInt(id) {
   const docInput = document.getElementById(id);
@@ -120,13 +132,15 @@ document
   .getElementById("add-money-card")
   .addEventListener("click", function () {
     toggleForms("add-money-form");
+    toggleCards("add-money-card");
   });
 
 // 2. cash-out toggle
 document
   .getElementById("cash-out-card")
   .addEventListener("click", function () {
-  toggleForms("cash-out-form");
+    toggleForms("cash-out-form");
+    toggleCards("cash-out-card");
 });
 
 // 3. transfer-money toggle
@@ -134,20 +148,24 @@ document
   .getElementById("transfer-money-card")
   .addEventListener("click", function () {
     toggleForms("transfer-money-form");
+    toggleCards("transfer-money-card");
   });
 // 4. get-bonus toggle
 document
   .getElementById("get-bonus-card")
   .addEventListener("click", function () {
     toggleForms("get-bonus-form");
+    toggleCards("get-bonus-card");
   });
 // 5. pay-bill toggle
 document.getElementById("pay-bill-card").addEventListener("click", function () {
   toggleForms("pay-bill-form");
+  toggleCards("pay-bill-card");
 });
 // 6. transactions toggle
 document
   .getElementById("transactions-card")
   .addEventListener("click", function () {
     toggleForms("transactions-form");
+    toggleCards("transactions-card");
   });
