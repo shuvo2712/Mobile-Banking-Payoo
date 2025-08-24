@@ -7,6 +7,25 @@ const VALID_ACC = 12345678;
 const VALID_AGENT = 123456;
 
 // Functions
+// Get input value as integer
+function getInputInt(id) {
+  const docInput = document.getElementById(id);
+  const docValue = docInput.value;
+  const parsedValue = parseInt(docValue);
+  return parsedValue;
+}
+// Get inner text as integer
+function getInnerTextInt(id) {
+  const docText = document.getElementById(id);
+  const docInnerText = docText.innerText;
+  const parsedText = parseInt(docInnerText);
+  return parsedText;
+}
+// Set new balance
+function setNewBalance(newBalance) {
+  document.getElementById("main-balance").innerText = newBalance;
+}
+
 // Toggle card border
 function toggleCards(cardId) {
   const cards = document.getElementsByClassName("feature-card");
@@ -29,22 +48,8 @@ function toggleForms(formId) {
     }
   }
 }
-// Get input value as integer
-function getInputInt(id) {
-  const docInput = document.getElementById(id);
-  const docValue = docInput.value;
-  const parsedValue = parseInt(docValue);
-  return parsedValue;
-}
-// Get inner text as integer
-function getInnerTextInt(id) {
-  const docText = document.getElementById(id);
-  const docInnerText = docText.innerText;
-  const parsedText = parseInt(docInnerText);
-  return parsedText;
-}
 
-// Form Buttons
+// Form Buttons.........................
 // Add money button
 document
   .getElementById("add-money-btn")
@@ -72,7 +77,7 @@ document
     }
     // sets new balance
     const newBalance = availableBalance + amount;
-    document.getElementById("main-balance").innerText = newBalance;
+    setNewBalance(newBalance);
     // console log
     console.log(availableBalance + "+" + amount + "=" + newBalance);
   });
@@ -109,12 +114,13 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
 
   // sets new balance
   const newBalance = availableBalance - amount;
-  document.getElementById("main-balance").innerText = newBalance;
+  setNewBalance(newBalance);
 
   // console log
   console.log(availableBalance + "-" + amount + "=" + newBalance);
 });
 
+// Toggle.............................
 // Toggle cards & forms on click events
 document
   .getElementById("add-money-card")
