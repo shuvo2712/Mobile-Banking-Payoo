@@ -51,14 +51,12 @@ document
   .addEventListener("click", function (e) {
     e.preventDefault();
     console.log("add money btn clicked");
-
     // gets input values
     const bank = document.getElementById("input-add-money-bank").value;
     const account = getInputInt("input-add-money-account");
     const amount = getInputInt("input-add-money-amount");
     const pin = getInputInt("input-add-money-pin");
     const availableBalance = getInnerTextInt("main-balance");
-
     // validation.......................
     if (account !== VALID_ACC) {
       alert("Invalid Bank Account Number");
@@ -72,16 +70,9 @@ document
       alert("Invalid PIN Number");
       return;
     }
-    // amount check
-    if (amount > availableBalance) {
-      alert("Insufficient Balance");
-      return;
-    }
-
     // sets new balance
     const newBalance = availableBalance + amount;
     document.getElementById("main-balance").innerText = newBalance;
-
     // console log
     console.log(availableBalance + "+" + amount + "=" + newBalance);
   });
