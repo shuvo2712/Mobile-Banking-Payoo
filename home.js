@@ -1,42 +1,42 @@
-// check if js is working
+// check js is linked
 console.log("home.js is working...");
 
-// valid numbers
+// VALID NUMBERS
 const VALID_PIN = 1122;
 const VALID_ACC = 12345678;
 const VALID_AGENT = 123456;
 
-// Function to toggle forms
-function toggleForms(Id) {
+// Functions
+// Toggle card border
+function toggleCards(cardId) {
+  const cards = document.getElementsByClassName("feature-card");
+  for (const card of cards) {
+    if (card.id === cardId) {
+      card.style.border = "2px solid #0874F2";
+    } else {
+      card.style.border = "2px solid #0808081a";
+    }
+  }
+}
+// Toggle form display
+function toggleForms(formId) {
   const forms = document.getElementsByClassName("form");
   for (const form of forms) {
-    if (form.id === Id) {
+    if (form.id === formId) {
       form.style.display = "block";
     } else {
       form.style.display = "none";
     }
   }
 }
-// Function to toggle card active state
-function toggleCards(cardId) {
-  const cards = document.getElementsByClassName("feature-card");
-  for (const card of cards) {
-    if (card.id === cardId) {
-      card.style.border = "2px solid #2563eb";
-    } else {
-      card.style.border = "2px solid #0808081a";
-    }
-  }
-}
-
-// Function to get input value as integer
+// Get input value as integer
 function getInputInt(id) {
   const docInput = document.getElementById(id);
   const docValue = docInput.value;
   const parsedValue = parseInt(docValue);
   return parsedValue;
 }
-// Function to get inner text as integer
+// Get inner text as integer
 function getInnerTextInt(id) {
   const docText = document.getElementById(id);
   const docInnerText = docText.innerText;
@@ -44,8 +44,8 @@ function getInnerTextInt(id) {
   return parsedText;
 }
 
-// Buttons
-// add money button
+// Form Buttons
+// Add money button
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (e) {
@@ -57,7 +57,6 @@ document
     const account = getInputInt("input-add-money-account");
     const amount = getInputInt("input-add-money-amount");
     const pin = getInputInt("input-add-money-pin");
-    // gets balance
     const availableBalance = getInnerTextInt("main-balance");
 
     // validation.......................
@@ -84,10 +83,10 @@ document
     document.getElementById("main-balance").innerText = newBalance;
 
     // console log
-    console.log(availableBalance + "+" + amount + '=' + newBalance);
+    console.log(availableBalance + "+" + amount + "=" + newBalance);
   });
 
-// cash out button
+// Cash out button
 document.getElementById("cash-out-btn").addEventListener("click", function (e) {
   e.preventDefault();
   console.log("cash out btn clicked");
@@ -96,7 +95,6 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
   const agent = getInputInt("input-cash-out-agent");
   const amount = getInputInt("input-cash-out-amount");
   const pin = getInputInt("input-cash-out-pin");
-  // gets balance
   const availableBalance = getInnerTextInt("main-balance");
 
   // validation.................
@@ -126,46 +124,36 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
   console.log(availableBalance + "-" + amount + "=" + newBalance);
 });
 
-// Toggle forms
-// 1. add-money toggle
+// Toggle cards & forms on click events
 document
   .getElementById("add-money-card")
   .addEventListener("click", function () {
-    toggleForms("add-money-form");
     toggleCards("add-money-card");
+    toggleForms("add-money-form");
   });
-
-// 2. cash-out toggle
-document
-  .getElementById("cash-out-card")
-  .addEventListener("click", function () {
-    toggleForms("cash-out-form");
-    toggleCards("cash-out-card");
+document.getElementById("cash-out-card").addEventListener("click", function () {
+  toggleCards("cash-out-card");
+  toggleForms("cash-out-form");
 });
-
-// 3. transfer-money toggle
 document
   .getElementById("transfer-money-card")
   .addEventListener("click", function () {
-    toggleForms("transfer-money-form");
     toggleCards("transfer-money-card");
+    toggleForms("transfer-money-form");
   });
-// 4. get-bonus toggle
 document
   .getElementById("get-bonus-card")
   .addEventListener("click", function () {
-    toggleForms("get-bonus-form");
     toggleCards("get-bonus-card");
+    toggleForms("get-bonus-form");
   });
-// 5. pay-bill toggle
 document.getElementById("pay-bill-card").addEventListener("click", function () {
-  toggleForms("pay-bill-form");
   toggleCards("pay-bill-card");
+  toggleForms("pay-bill-form");
 });
-// 6. transactions toggle
 document
   .getElementById("transactions-card")
   .addEventListener("click", function () {
-    toggleForms("transactions-form");
     toggleCards("transactions-card");
+    toggleForms("transactions-form");
   });
