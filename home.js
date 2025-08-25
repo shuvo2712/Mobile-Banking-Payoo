@@ -1,32 +1,34 @@
 // check js is linked
 console.log("home.js is working...");
 
+// Transaction history array
+const transactionHistory = [];
+
 // VALID NUMBERS
 const VALID_PIN = 1122;
 const VALID_ACC = 12345678;
 const VALID_AGENT = 123456;
 
-// Functions
-// Get input value as integer
+// Functions...........................
+// Get input value as integer function
 function getInputInt(id) {
   const docInput = document.getElementById(id);
   const docValue = docInput.value;
   const parsedValue = parseInt(docValue);
   return parsedValue;
 }
-// Get inner text as integer
+// Get inner text as integer function
 function getInnerTextInt(id) {
   const docText = document.getElementById(id);
   const docInnerText = docText.innerText;
   const parsedText = parseInt(docInnerText);
   return parsedText;
 }
-// Set new balance
+// Set new balance function
 function setNewBalance(newBalance) {
   document.getElementById("main-balance").innerText = newBalance;
 }
-
-// Toggle card border
+// Toggle card border function
 function toggleCards(cardId) {
   const cards = document.getElementsByClassName("feature-card");
   for (const card of cards) {
@@ -37,7 +39,7 @@ function toggleCards(cardId) {
     }
   }
 }
-// Toggle form display
+// Toggle form display function
 function toggleForms(formId) {
   const forms = document.getElementsByClassName("form");
   for (const form of forms) {
@@ -57,29 +59,35 @@ document
     e.preventDefault();
     console.log("add money btn clicked");
     // gets input values
-    const bank = document.getElementById("input-add-money-bank").value;
+    // const bank = document.getElementById("input-add-money-bank").value;
     const account = getInputInt("input-add-money-account");
     const amount = getInputInt("input-add-money-amount");
     const pin = getInputInt("input-add-money-pin");
     const availableBalance = getInnerTextInt("main-balance");
-    // validation.......................
-    if (account !== VALID_ACC) {
-      alert("Invalid Bank Account Number");
-      return;
-    }
+    // validation.....
+    // if (account !== VALID_ACC) {
+    //   alert("Invalid Bank Account Number");
+    //   return;
+    // }
     if (!Number.isInteger(amount) || amount <= 0) {
       alert("Invalid Amount");
       return;
     }
-    if (pin !== VALID_PIN) {
-      alert("Invalid PIN Number");
-      return;
-    }
+    // if (pin !== VALID_PIN) {
+    //   alert("Invalid PIN Number");
+    //   return;
+    // }
     // sets new balance
     const newBalance = availableBalance + amount;
     setNewBalance(newBalance);
-    // console log
-    console.log(availableBalance + "+" + amount + "=" + newBalance);
+    // add transaction to history
+    const transaction = {
+      type: "Add Money",
+      amount: amount,
+      date: new Date().toLocaleString(),
+    }
+    transactionHistory.push(transaction);
+    console.log(transactionHistory);
   });
 
 // Cash out button
@@ -93,19 +101,19 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
   const pin = getInputInt("input-cash-out-pin");
   const availableBalance = getInnerTextInt("main-balance");
 
-  // validation.................
-  if (agent !== VALID_AGENT) {
-    alert("Invalid Agent Number");
-    return;
-  }
+  // validation.....
+  // if (agent !== VALID_AGENT) {
+  //   alert("Invalid Agent Number");
+  //   return;
+  // }
   if (!Number.isInteger(amount) || amount <= 0) {
     alert("Invalid Amount");
     return;
   }
-  if (pin !== VALID_PIN) {
-    alert("Invalid PIN Number");
-    return;
-  }
+  // if (pin !== VALID_PIN) {
+  //   alert("Invalid PIN Number");
+  //   return;
+  // }
   // available balance check
   if (amount > availableBalance) {
     alert("Insufficient Balance");
@@ -115,9 +123,6 @@ document.getElementById("cash-out-btn").addEventListener("click", function (e) {
   // sets new balance
   const newBalance = availableBalance - amount;
   setNewBalance(newBalance);
-
-  // console log
-  console.log(availableBalance + "-" + amount + "=" + newBalance);
 });
 
 // Toggle.............................

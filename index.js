@@ -1,5 +1,9 @@
 console.log("this is script.js");
 
+// Colors
+// #0874F2 - Blue
+// #f4f5f7 - Light Black
+
 // valid numbers
 const VALID_USER = 1234;
 const VALID_PIN = 1122;

@@ -49,7 +49,7 @@
       <div class="flex gap-2">
         <img class="h-10" src="assets/logo.png" alt="Logo" />
         <div class="">
-          <h2 class="font-bold">$<span id="main-balance"> 10000</span></h2>
+          <h1 class="font-bold">$<span id="main-balance"> 10000</span></h1>
           <p class="text-[#08080880]">Available Balance</p>
         </div>
       </div>
@@ -75,29 +75,29 @@
       <!-- add money feature -->
       <div id="add-money-card" class="feature-card">
         <img class="mx-auto" src="assets/addMoney.png" alt="" />
-        <h2>Add Money</h2>
+        <h1>Add Money</h1>
       </div>
       <!-- cash out feature -->
       <div id="cash-out-card" class="feature-card">
         <img class="mx-auto" src="assets/cashOut.png" alt="" />
-        <h2>Cash Out</h2>
+        <h1>Cash Out</h1>
       </div>
       <!-- transfer money feature -->
       <div id="transfer-money-card" class="feature-card">
-        <img class="mx-auto" src="assets/transfer.png" alt="" />
-        <h2>Transfer Money</h2>
+        <img class="mx-auto" src="assets/transferMoney.png" alt="" />
+        <h1>Transfer Money</h1>
       </div>
       <div id="get-bonus-card" class="feature-card">
         <img class="mx-auto" src="assets/getBonus.png" alt="" />
-        <h2>Get Bonus</h2>
+        <h1>Get Bonus</h1>
       </div>
       <div id="pay-bill-card" class="feature-card">
         <img class="mx-auto" src="assets/payBill.png" alt="" />
-        <h2>Pay Bill</h2>
+        <h1>Pay Bill</h1>
       </div>
       <div id="transactions-card" class="feature-card">
-        <img class="mx-auto" src="assets/transaction.png" alt="" />
-        <h2>Transactions</h2>
+        <img class="mx-auto" src="assets/transactions.png" alt="" />
+        <h1>Transactions</h1>
       </div>
     </section>
 
@@ -105,11 +105,11 @@
     <section class="all-form-section p-5">
       <!-- add money form -->
       <div id="add-money-form" class="form" style="display: none">
-        <h2 class="font-semibold mb-2">Add Money</h2>
-        <form action="" class="bg-white rounded-2xl p-5">
+        <h1 class="font-semibold">Add Money</h1>
+        <form action="" class="bg-white rounded-2xl p-5 mt-2">
           <!-- select bank -->
           <div>
-            <label class="font-semibold" for="">Select A Bank</label>
+            <label class="" for="">Select A Bank</label>
             <br />
             <select
               id="input-add-money-bank"
@@ -126,7 +126,7 @@
           </div>
           <!-- account number -->
           <div>
-            <label class="font-semibold" for="">Bank Account Number</label>
+            <label class="" for="">Bank Account Number</label>
             <br />
             <input
               id="input-add-money-account"
@@ -137,7 +137,7 @@
           </div>
           <!-- amount -->
           <div>
-            <label class="font-semibold" for="">Amount to Add</label>
+            <label class="" for="">Amount to Add</label>
             <br />
             <input
               id="input-add-money-amount"
@@ -148,7 +148,7 @@
           </div>
           <!-- pin -->
           <div>
-            <label class="font-semibold" for="">PIN number</label>
+            <label class="" for="">PIN number</label>
             <br />
             <input
               id="input-add-money-pin"
@@ -169,11 +169,11 @@
 
       <!-- cashout form -->
       <div id="cash-out-form" class="form" style="display: none">
-        <h2 class="font-semibold mb-2">Cash Out</h2>
-        <form action="" class="bg-white rounded-2xl p-5">
+        <h1 class="font-semibold">Cash Out</h1>
+        <form action="" class="bg-white rounded-2xl p-5 mt-2">
           <!-- agent number -->
           <div>
-            <label class="font-semibold" for="">Agent Number</label>
+            <label class="" for="">Agent Number</label>
             <br />
             <input
               id="input-cash-out-agent"
@@ -184,7 +184,7 @@
           </div>
           <!-- amount -->
           <div>
-            <label class="font-semibold" for="">Amount To Withdraw</label>
+            <label class="" for="">Amount To Withdraw</label>
             <br />
             <input
               id="input-cash-out-amount"
@@ -195,7 +195,7 @@
           </div>
           <!-- pin -->
           <div>
-            <label class="font-semibold" for="">PIN number</label>
+            <label class="" for="">PIN number</label>
             <br />
             <input
               id="input-cash-out-pin"
@@ -216,22 +216,37 @@
 
       <!-- transfer money form -->
       <div id="transfer-money-form" class="form" style="display: none">
-        <h2>Transfer Money</h2>
+        <h1>Transfer Money</h1>
       </div>
 
       <!-- get bonus form -->
       <div id="get-bonus-form" class="form" style="display: none">
-        <h2>Get Bonus</h2>
+        <h1>Get Bonus</h1>
       </div>
 
       <!-- pay bill form -->
       <div id="pay-bill-form" class="form" style="display: none">
-        <h2>Pay Bill</h2>
+        <h1>Pay Bill</h1>
       </div>
 
       <!-- transactions form -->
-      <div id="transactions-form" class="form" style="display: none">
-        <h2>Transactions</h2>
+      <div id="transactions-form" class="form">
+        <h1 class="font-semibold">Transactions</h1>
+        <div class="flex justify-between items-center p-3 mt-2 bg-white rounded-xl">
+        <div class="flex items-center gap-2">
+          <div class="bg-[#f4f5f7] rounded-full p-3">
+            <img src="assets/addMoney.png" alt="" />
+          </div>
+          <div>
+            <h1>Add Money</h1>
+            <p>Today at 27:12 PM</p>
+          </div>
+        </div>
+        <!-- three dots -->
+        <div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        </div>
       </div>
     </section>
 
