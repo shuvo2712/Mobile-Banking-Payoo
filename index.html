@@ -15,7 +15,7 @@
     <!-- tailwind css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <!------------------------------ BODY ------------------------------>
+  <!-- BODY -->
   <body
     class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center justify-center"
   >
@@ -28,25 +28,25 @@
     <!-- Log In Form -->
     <form class="w-[350px] bg-white border border-[#0874F2] rounded-4xl p-10">
       <div class="flex flex-col gap-4">
-        <!-- mobile number -->
-        <label class="font-semibold" for="">Mobile Number</label>
+        <!-- user id -->
+        <label class="font-semibold" for="">User ID</label>
         <input
-          id="input-mobile"
-          type="number"
-          placeholder="01*********"
+          id="input-user"
+          type="text"
+          placeholder="Enter User ID"
           class="input rounded-full bg-[#f4f5f7]"
         />
         <!-- pin -->
         <label class="font-semibold" for="">4 Digit Pin</label>
         <input
           id="input-pin"
-          type="password"
-          placeholder="********"
+          type="text"
+          placeholder="Enter Pin"
           class="input rounded-full bg-[#f4f5f7]"
         />
         <!-- log in button -->
         <button
-          id="login-button"
+          id="log-in-button"
           class="btn rounded-full mt-3 bg-[#0874F2] text-white"
         >
           Log In

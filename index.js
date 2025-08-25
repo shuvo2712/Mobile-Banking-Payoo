@@ -1,17 +1,17 @@
 console.log("this is script.js");
 
 // valid numbers
-const VALID_MOBILE = 1234;
+const VALID_USER = 1234;
 const VALID_PIN = 1122;
 
 // #login button
-document.getElementById("login-button").addEventListener("click", function (e) {
+document.getElementById("log-in-button").addEventListener("click", function (e) {
   e.preventDefault();
-  const inputMobNum = parseInt(document.getElementById("input-mobile").value);
+  const inputUserId = parseInt(document.getElementById("input-user").value);
   const inputPinNum = parseInt(document.getElementById("input-pin").value);
   // validation
-  if (inputMobNum !== VALID_MOBILE) {
-    alert("Mobile Number Invalid");
+  if (inputUserId !== VALID_USER) {
+    alert("User ID Invalid");
   } else if (inputPinNum !== VALID_PIN) {
     alert("PIN number Invalid");
   } else {

@@ -154,3 +154,9 @@ document
     toggleCards("transactions-card");
     toggleForms("transactions-form");
   });
+
+// Log Out button
+document.getElementById("log-out-btn").addEventListener("click", function () {
+  window.location.href = "index.html";
+}
+);
