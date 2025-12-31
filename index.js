@@ -6,7 +6,7 @@ console.log("this is script.js");
 
 // valid numbers
 const VALID_USER = 1234;
-const VALID_PIN = 1122;
+const VALID_PIN = 1234;
 
 // #login button
 document.getElementById("log-in-button").addEventListener("click", function (e) {
@@ -15,9 +15,9 @@ document.getElementById("log-in-button").addEventListener("click", function (e) 
   const inputPinNum = parseInt(document.getElementById("input-pin").value);
   // validation
   if (inputUserId !== VALID_USER) {
-    alert("User ID Invalid");
+    alert("User ID 1234");
   } else if (inputPinNum !== VALID_PIN) {
-    alert("PIN number Invalid");
+    alert("PIN number 1234");
   } else {
     window.location.href = "home.html";
   }
